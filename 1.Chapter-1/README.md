@@ -24,4 +24,21 @@
 - **The next thing gettok needs to do is recognize identifiers and specific keywords like "def"**. It does this with the simple loop:
 
 
+##### isalpha isspace isdigit
 
+- **isspace** --> it will check for whitespace
+
+- **isalpha** --> sets the *Identifier* global whenever it lexes an identifier. Also complete the full word by looping (def, extern, tok_identifier)
+
+- **isdigit** --> it will checks for integer & floating point number
+   - uses *strod()* --> to convert numeric string to a numberic value.
+
+
+
+###### Comment
+- We process comment if the *LastChar == '#''*
+    - And skip all these until it hit `EOF (End of File), \n, \r`
+
+
+###### EOF
+- At last if it none other than `EOF`, then just return its token otherwise, return characters ASCII Value
